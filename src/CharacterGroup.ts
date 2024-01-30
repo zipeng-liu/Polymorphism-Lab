@@ -16,11 +16,11 @@ export class CharacterGroup implements ISortable {
 	}
 
 	swap(leftPos: number, rightPos: number): void {
-		if (this.compare(leftPos, rightPos)) {
-			const leftChar = this.data[leftPos];
-			const rightChar = this.data[rightPos];
-			const theRest = this.data.substring(rightPos-1, this.length);
-			this.data = rightChar + leftChar + theRest;
-		}
+		let stringList = this.data.split("");
+		const leftData = stringList[leftPos];
+		const rightData = stringList[rightPos];
+		stringList[leftPos] = rightData;
+		stringList[rightPos] = leftData;
+		this.data = stringList.join(""); 
 	}
 }
