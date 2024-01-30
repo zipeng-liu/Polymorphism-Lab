@@ -1,23 +1,28 @@
 import { CharacterGroup } from "./CharacterGroup";
 import { LinkedListGroup } from "./LinkedListGroup";
 import { NumberGroup } from "./NumberGroup";
+import { SortUtil } from "./SortUntil";
 
 const linkedList1 = new LinkedListGroup();
 linkedList1.add(4);
 linkedList1.add(2);
 linkedList1.add(3);
 linkedList1.add(1);
-linkedList1.swap(0, 1);
-console.log(linkedList1.head?.data)
-console.log(linkedList1.head?.next?.data);
 
 const numberList1 = new NumberGroup([4, 2, 3, 1]);
-console.log(numberList1.length);
-numberList1.swap(0, 1);
-console.log(numberList1.data);
+const string1 = new CharacterGroup("xyzabc");
 
-const string1 = new CharacterGroup("pbqfrgh");
-console.log(string1.length);
-string1.swap(0, 1);
-console.log(string1.data);
+const test1 = new SortUtil(linkedList1);
+test1.sort();
+console.log(test1.collection)
+
+const test2 = new SortUtil(numberList1);
+test2.sort();
+console.log(test2.collection)
+
+const test3 = new SortUtil(string1);
+test3.sort();
+console.log(test3.collection)
+
+
 
