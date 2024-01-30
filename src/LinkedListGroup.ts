@@ -85,13 +85,3 @@ export class LinkedListGroup implements ISortable {
 		}
 	}
 }
-
-
-const node1 = new LinkedListGroup();
-node1.add(4);
-node1.add(2);
-node1.add(3);
-node1.add(1);
-node1.swap(0, 1);
-console.log(node1.head?.data)
-console.log(node1.head?.next?.data);
