@@ -1,3 +1,4 @@
+import { CharacterGroup } from "./CharacterGroup";
 import { LinkedListGroup } from "./LinkedListGroup";
 import { NumberGroup } from "./NumberGroup";
 
@@ -14,3 +15,9 @@ const numberList1 = new NumberGroup([4, 2, 3, 1]);
 console.log(numberList1.length);
 numberList1.swap(0, 1);
 console.log(numberList1.data);
+
+const string1 = new CharacterGroup("pbqfrgh");
+console.log(string1.length);
+string1.swap(0, 1);
+console.log(string1.data);
+
